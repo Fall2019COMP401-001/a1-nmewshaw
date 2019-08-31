@@ -71,8 +71,10 @@ public class A1Adept {
 			String biggestAmount2 = String.format("%.2f", biggestAmount);
 			String smallestAmount2 = String.format("%.2f", smallestAmount);
 			System.out.println("Biggest: " + biggestFirst + " " + biggestLast + " ("
-					+ biggestAmount2 + ") " + "Smallest: " + smallestFirst + " " + 
-					smallestLast + " (" + smallestAmount2 + ") Average: " + average2);
+					+ biggestAmount2 + ")");
+			System.out.println("Smallest: " + smallestFirst + " " + 
+					smallestLast + " (" + smallestAmount2 + ")" );
+			System.out.println("Average: " + average2);
 		}
 		
 	}
