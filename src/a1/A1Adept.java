@@ -8,6 +8,7 @@ public class A1Adept {
 		
 		Scanner scan = new Scanner(System.in);
 
+		int printer = 0;
 		int itemCount = scan.nextInt();
 		String [] itemName = new String [itemCount];
 		double [] itemPrice = new double [itemCount];
@@ -70,11 +71,16 @@ public class A1Adept {
 			String average2 = String.format("%.2f", average);
 			String biggestAmount2 = String.format("%.2f", biggestAmount);
 			String smallestAmount2 = String.format("%.2f", smallestAmount);
-			System.out.println("Biggest: " + biggestFirst + " " + biggestLast + " ("
-					+ biggestAmount2 + ")");
-			System.out.println("Smallest: " + smallestFirst + " " + 
-					smallestLast + " (" + smallestAmount2 + ")" );
-			System.out.println("Average: " + average2);
+			printer++;
+			
+			if (printer == firstName.length) {
+				System.out.println("Biggest: " + biggestFirst + " " + biggestLast + " ("
+						+ biggestAmount2 + ")");
+				System.out.println("Smallest: " + smallestFirst + " " + 
+						smallestLast + " (" + smallestAmount2 + ")" );
+				System.out.println("Average: " + average2);
+			}
+			
 		}
 		
 	}
