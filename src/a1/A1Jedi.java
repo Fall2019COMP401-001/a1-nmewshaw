@@ -13,6 +13,7 @@ public class A1Jedi {
 		String [] itemName = new String [itemCount];
 		int [] ifBought = new int [itemCount];
 		int [] boughtCount = new int [itemCount];
+		int [] niceTry = new int [itemCount];
 		double [] itemPrice = new double [itemCount];
 		for (int i=0; i<itemName.length; i++) {
 			itemName[i] = scan.next();
@@ -33,8 +34,13 @@ public class A1Jedi {
 			for (int c = 0; c<numOfProductsBought; c++) {
 				for (int d = 0; d<itemCount; d++) {
 				        if (itemBought[c].equals(itemName[d])) {
-						ifBought[d] += 1;
+				        	if (niceTry[d] > 0) {
+				        		boughtCount[d] += itemNumber[c];
+				        		niceTry[d]++;
+				        	} else {
+						ifBought[d]++;
 						boughtCount[d] += itemNumber[c];
+				        	}
 				}
 			    }
 				
