@@ -37,6 +37,7 @@ public class A1Jedi {
 				        	if (niceTry[d] > 0) {
 				        		boughtCount[d] += itemNumber[c];
 				        		niceTry[d]++;
+				        		break;
 				        	} else {
 						ifBought[d]++;
 						boughtCount[d] += itemNumber[c];
