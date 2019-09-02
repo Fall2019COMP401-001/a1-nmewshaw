@@ -30,19 +30,16 @@ public class A1Jedi {
 				itemNumber[b] = scan.nextInt();
 				itemBought[b] = scan.next();
 			}
+			boolean [] niceTry = new boolean [itemName.length];
 			for (int c = 0; c<numOfProductsBought; c++) {
 				for (int d = 0; d<itemCount; d++) {
-					 boolean niceTry = false;
-					if (itemBought[c].equals(itemName[d]) && niceTry == true) {
+					if (itemBought[c].equals(itemName[d]) && niceTry[d] == true) {
 						boughtCount[d] += itemNumber[c];
-					}
-						else if (itemBought[c].equals(itemName[d])) {
+					} else if (itemBought[c].equals(itemName[d])) {
 						ifBought[d]++;
 						boughtCount[d] += itemNumber[c];
-						niceTry = true;
-						
-			
-				}
+						niceTry[d] = true;
+						} 
 			    }
 				
 			      }
